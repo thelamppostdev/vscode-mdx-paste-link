@@ -2,13 +2,14 @@
   "name": "mdx-paste-link",
   "displayName": "MDX Paste Link",
   "description": "Paste URLs over selected text to create markdown links in MDX files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/thelamppostdev/vscode-mdx-paste-link.git"
   },
   "publisher": "thelamppostdev",
   "license": "MIT",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.74.0"
   },
