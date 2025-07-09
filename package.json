@@ -1,0 +1,55 @@
+{
+  "name": "mdx-paste-link",
+  "displayName": "MDX Paste Link",
+  "description": "Paste URLs over selected text to create markdown links in MDX files",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:mdx",
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mdx-paste-link.pasteLink",
+        "title": "Paste Link"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "mdx-paste-link.pasteLink",
+        "key": "ctrl+shift+v",
+        "mac": "cmd+shift+v",
+        "when": "editorTextFocus && (resourceExtname == .mdx || resourceExtname == .md)"
+      }
+    ],
+    "languages": [
+      {
+        "id": "mdx",
+        "extensions": [
+          ".mdx"
+        ],
+        "aliases": [
+          "MDX",
+          "mdx"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.126",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.4"
+  }
+}
